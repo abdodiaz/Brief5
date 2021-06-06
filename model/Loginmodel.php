@@ -27,4 +27,10 @@ class Loginmodel
         $z= $this->con->connect($selects);
         return $z->fetchAll(PDO::FETCH_ASSOC);
      }
+     function getense($id){
+     
+        $selects="SELECT * FROM `user` WHERE `id`=$id";
+        $z= $this->con->connect($selects);
+        return $z->fetchAll(PDO::FETCH_ASSOC);
+     }
 }

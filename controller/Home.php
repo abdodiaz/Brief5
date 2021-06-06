@@ -6,10 +6,10 @@ class Home {
       if(!empty($_SESSION['sesid'])){
       
         if($_SESSION['role']==1){
-          require_once __DIR__. "/../view/home1.php";
+          require_once __DIR__. "/../view/reservation.php";
         }
         else{
-          require_once __DIR__. "/../view/home1.php";
+          require_once __DIR__. "/../view/reservation.php";
         }
       }
       else{

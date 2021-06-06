@@ -16,11 +16,11 @@ class Login
             $obj = new Loginmodel();
             $find = $obj->find($email, $password);
             if ($find == true) {
-                $result = $obj->login($email, $password);
+                $result = $obj->login($email,$password);
                 foreach ($result as $row) {
                     session_start();
                    $id= $_SESSION['sesid'] = $row['Id'];
-                   $_SESSION['role']=$row['Role'];
+                  $_SESSION['role']=$row['Role'];
                 }
                 $obj = new Loginmodel();
                 $findrole = $obj->getall($_SESSION['sesid']);
@@ -28,17 +28,21 @@ class Login
                     $role=$row['Role'];
                 }
                 if($role==1){
-                    header("location:http://localhost/mvc/view/home1.php?id=$id");
+                    header("location:http://localhost/mvc/cour?ide=$id");
                 }
                 elseif($role==0){
-                    header("location:http://localhost/mvc/view/home.php?id=$id");
+                    header("location:http://localhost/mvc/salle?id=$id");
+
                 }
             } else {
-                echo "makaynch";
+                echo( "<div class='alert alert-primary' role='alert'>
+                Deja Reserve!
+              </div> "); 
             }
         } else {
-            //  header("location:http://localhost/mvc/view/login/index.php");
-            echo "<script> alert('login incorecte')<script/>";
+            echo( "<script> alert('Un champe vide')</script>");
+           
+           // require_once "/xampp/htdocs/mvc";
         }
     }
     function logout(){

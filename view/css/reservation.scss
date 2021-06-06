@@ -1,0 +1,46 @@
+body{
+
+    #nav{
+        height: 50px;
+        background-color: rgb(46, 46, 46);
+        ul{
+            list-style: none;
+            text-decoration: none;
+        }
+        button{
+            margin-left: 93%;
+        }
+    }
+
+    #form{
+        margin-top: 44px;
+        padding: 22px;
+        margin-left: 25%;
+        border: 0.5px solid grey;
+        border-radius: 5px;
+
+        button{
+            margin-left: 44%;
+            margin-top: 15px;
+        }
+        #select{
+            margin-top: 20px;
+        }
+        
+    }
+
+    #table{
+        width: 90%;
+        margin-left: 5%;
+
+        td{
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        th{
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
+}

@@ -9,7 +9,7 @@ class Salle
 		if(!empty($_SESSION['sesid'])){
 			$obj = new Salles();
 			$result= $obj->GetAll();
-			require_once __DIR__ . "/../view/salle/index.php";	
+			require_once __DIR__ . "/../view/salle/index.php";
 		}
 		else{
 			header("location:http://localhost/mvc/");
@@ -31,7 +31,7 @@ class Salle
 		if(isset($_POST['modifier'])){
             $salle =new Salles();
            	$result=$salle->edit($_POST['id']);
-			require_once __DIR__ . "/../view/salle/UpdateSalle.php";
+			require_once __DIR__ . "/../view/salle/";
         }
 	}
 
